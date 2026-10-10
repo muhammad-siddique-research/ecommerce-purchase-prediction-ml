@@ -70,6 +70,8 @@ The notebook verifies **zero missing predictor values** and identifies **125 rep
 
 ### Downloadable evaluation results
 
+The [IQR outlier screening table](results/outlier_screening.csv) documents the retained extreme observations and the zero-inflated `PageValues` distribution. Reproduce the audit with `python -m src.outlier_audit --csv data/online_shoppers_intention.csv`.
+
 - [Held-out model metrics (CSV)](results/test_model_metrics.csv)
 - [Cross-validation scores and best hyperparameters (CSV)](results/cross_validation_summary.csv)
 - [PageValues feature ablation (CSV)](results/pagevalues_ablation.csv)
@@ -86,7 +88,7 @@ The notebook verifies **zero missing predictor values** and identifies **125 rep
 - **Size:** 12,330 sessions; 17 predictor fields plus `Revenue` (binary outcome).
 - **Class distribution:** 1,908 sessions with purchases (15.5%), 10,422 without (84.5%).
 - **Missingness:** The repository describes no missing data. The code checks this empirically before modeling.
-- **Reuse terms:** Dataset licensed CC BY 4.0 by its creators; this repository cites the original source. Data is retrieved at run time, not committed to Git.
+- **Reuse terms:** Dataset licensed CC BY 4.0 by its creators; this repository cites the original source. A licensed copy of the original UCI CSV is included in `data/` **for the university ZIP requirement**; the source remains available from UCI. The CSV was independently checked against the executed notebook.
 
 ### Important prediction-time limitation
 
@@ -119,10 +121,10 @@ python -m pip install -r requirements.txt
 python -m src.run_experiment
 ```
 
-This uses `ucimlrepo` to retrieve the UCI dataset online. If you already downloaded `online_shoppers_intention.csv`, use:
+This uses `ucimlrepo` to retrieve the UCI dataset online. To run the experiment offline using the included original UCI CSV, use:
 
 ```bash
-python -m src.run_experiment --csv /path/to/online_shoppers_intention.csv
+python -m src.run_experiment --csv data/online_shoppers_intention.csv
 ```
 
 Outputs will be saved to `results/` and `results/figures/`. No GPU required. To quickly validate the workflow on local data before a full analysis, specify `--fast` (reduced tuning grids; **not** a substitute for final reported results).
@@ -139,10 +141,11 @@ Outputs will be saved to `results/` and `results/figures/`. No GPU required. To 
 ## Repository layout
 
 ```text
-notebooks/    Colab walkthrough and interactive outputs
-src/          Reusable command-line modeling and evaluation pipeline
+data/         Attributed original UCI dataset for the self-contained university submission
+notebooks/    Executed Colab analysis and saved outputs
+src/          Reusable modeling pipeline and non-destructive outlier screening
 tests/        Synthetic-data smoke tests, not evidence of real-data performance
-results/      Real-data outputs generated during execution
+results/      Real-data outputs, descriptive screening summary, and experiment metrics
 reports/      Results-based research report, PDF, and original template
 .github/      Continuous integration of tests
 ```
@@ -153,7 +156,11 @@ reports/      Results-based research report, PDF, and original template
 
 **Cite the dataset independently** using the UCI DOI above; for repository software, use [`CITATION.cff`](CITATION.cff). Code organization and documentation were developed with AI assistance; model metrics originate from the executed Colab experiment. Follow applicable academic integrity, assignment-publication, and dataset attribution requirements.
 
-**Publication status:** This repository is public, and the [final author-attributed PDF](reports/research_report_final.pdf) is available for university submission. The notebook, model metrics, figures, and source code remain available for independent inspection.
+**Publication status:** This repository is public, and the [final author-attributed PDF](reports/research_report_final.pdf) and attributed [original UCI dataset](data/online_shoppers_intention.csv) are available for a self-contained university submission. The notebook, model metrics, figures, and source code remain available for independent inspection.
+
+## University mini-project submission
+
+Download the repository ZIP or the `Predictive_Modeling_Mini_Project_Submission` GitHub Actions artifact, which contains a ready-to-submit ZIP with the original dataset, completed executed notebook, code, final PDF, saved results, and source attribution. The notebook's modeling code and saved outputs have not been altered by these documentation corrections.
 
 ## References
 

@@ -25,6 +25,12 @@ The outcome balance and engagement-duration distributions are shown in Appendix 
 
 
 
+### 2.1 Outlier screening and treatment decision
+
+An additional non-destructive Tukey interquartile-range (IQR) screen was applied to two positively skewed predictors in the **original, unchanged UCI dataset**. Product-related browsing duration had Q1 = **184.14**, Q3 = **1,464.16**, and an upper IQR fence of **3,384.19**, flagging **961 of 12,330 observations** above the fence. For `PageValues`, Q1 and Q3 are both zero, making the IQR and calculated upper fence zero; the conventional rule consequently flags **all 2,730 positive values**. This demonstrates that a mechanical IQR screen is unsuitable for automatic removal in a heavily zero-inflated variable.
+
+These flagged observations were **retained**, not winsorized, clipped, or deleted: the dataset documentation does not establish that high-engagement sessions are measurement errors, and deletion would risk removing meaningful behavioral information. This decision was made to avoid introducing arbitrary sample selection and to preserve comparability with the executed model results. The screening is reproducible with `python -m src.outlier_audit --csv data/online_shoppers_intention.csv` and recorded in `results/outlier_screening.csv`. It is a descriptive data-quality audit, not a new model-training experiment.
+
 ## 3. Preprocessing and analytical methodology
 
 Data were split into **80% training (9,864 sessions)** and **20% testing (2,466 sessions)** using stratification and `random_state=42`. `Month`, `OperatingSystems`, `Browser`, `Region`, `TrafficType`, `VisitorType`, and `Weekend` were treated as categorical. Their values were imputed with the most frequent category when necessary and one-hot encoded. Numerical predictors were assigned median imputation as a safeguard and standardized. Transformations were implemented through scikit-learn pipelines and fitted using training data within each cross-validation fold, thereby preventing the held-out test data from informing fitted preprocessing parameters.

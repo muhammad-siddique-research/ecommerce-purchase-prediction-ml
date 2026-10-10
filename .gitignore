@@ -6,7 +6,9 @@ venv/
 .env
 *.pyc
 .DS_Store
-/data/
+/data/*
+!/data/online_shoppers_intention.csv
+!/data/DATASET_LICENSE.md
 *.zip
 # Avoid accidentally committing raw datasets or automatically generated experiment artifacts.
 /online_shoppers_intention.csv

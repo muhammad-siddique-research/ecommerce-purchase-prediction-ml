@@ -1,0 +1,3 @@
+Feature,Q1,Median,Q3,IQR,Lower_fence,Upper_fence,Flagged_below,Flagged_above,Total_rows,Maximum,Decision
+ProductRelated_Duration,184.137500,598.936905,1464.157214,1280.019714,-1735.892070,3384.186784,0,961,12330,63973.522230,Retained plausible extreme engagement
+PageValues,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0,2730,12330,361.763742,Retained zero-inflated feature; IQR flags all positive values

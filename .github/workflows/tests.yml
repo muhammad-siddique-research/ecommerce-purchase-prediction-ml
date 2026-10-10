@@ -14,3 +14,12 @@ jobs:
         run: python -m pip install -r requirements-dev.txt
       - name: Run synthetic-data smoke tests
         run: python -m pytest -q
+      - name: Build self-contained submission ZIP
+        run: python scripts/build_submission.py
+      - name: Upload university submission ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: Predictive_Modeling_Mini_Project_Submission
+          path: dist/Predictive_Modeling_Mini_Project_Submission.zip
+          if-no-files-found: error
+          retention-days: 30
