@@ -1,12 +1,13 @@
 cff-version: 1.2.0
-message: "Please cite the UCI dataset separately and cite this repository if you reuse its code."
+message: "Please cite this research code repository and credit the original UCI dataset separately."
 title: "E-Commerce Purchase Intention Prediction: A Comparative Machine Learning Study"
 type: software
 authors:
-  - name: "[REPLACE WITH YOUR PREFERRED PUBLIC AUTHOR NAME]"
-date-released: 2026-10-09
+  - given-names: Muhammad
+    family-names: Siddique
+repository-code: "https://github.com/muhammad-siddique-research/ecommerce-purchase-prediction-ml"
 license: MIT
-abstract: "Reproducible baseline comparison of three supervised learning algorithms for online purchase prediction."
+abstract: "A reproducible comparative evaluation of Decision Tree, KNN, and Gaussian Naive Bayes for predicting online shopping purchase outcomes."
 keywords:
   - machine learning
   - ecommerce

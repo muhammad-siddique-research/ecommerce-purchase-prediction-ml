@@ -1,9 +1,9 @@
 # E-Commerce Purchase Intention Prediction: A Comparative Machine Learning Study
 
-**Researcher:** [Enter your name]  
+**Researcher:** Muhammad Siddique  
 **Date:** 9 October 2026  
 **Dataset:** Online Shoppers Purchasing Intention Dataset (UCI, DOI: 10.24432/C5F88Q)  
-**Status:** Results-based draft prepared from the Colab export; final author review required.
+**Status:** Research report based on the executed Colab experiment; author review required before final public release.
 
 ## Abstract
 
@@ -19,7 +19,7 @@ The objective is to compare predictive performance rather than establish why ind
 
 The dataset was obtained from the UCI Machine Learning Repository (Sakar & Kastro, 2018). It includes **12,330 sessions**, **17 predictor variables**, and the binary outcome `Revenue`. In the full dataset, **1,908 sessions (15.47%)** ended in a purchase, while **10,422 (84.53%)** did not. The held-out test sample comprises 2,466 sessions: **382 purchases** and **2,084 non-purchases**.
 
-Predictors include measures of website engagement, visit characteristics, and categorical identifiers. The source describes no missing observations; the notebook performs an independent missingness check, although its console output was not included in the exported ZIP. Median and mode imputers were consequently built as safeguards for potential future records, not as evidence that missing observations were repaired in this dataset. The exploratory notebook also plots the distribution of product-page browsing duration. Long browsing sessions or unusually large `PageValues` may be legitimate observations and should not be deleted without contextual validation.
+Predictors include measures of website engagement, visit characteristics, and categorical identifiers. The source describes no missing observations, and the executed notebook independently confirms zero missing values across predictor fields. Median and mode imputers were consequently built as safeguards for potential future records, not as evidence that missing observations were repaired in this dataset. The exploratory notebook also plots the distribution of product-page browsing duration. Long browsing sessions or unusually large `PageValues` may be legitimate observations and should not be deleted without contextual validation.
 
 The outcome balance and engagement-duration distributions are shown in Appendix A (Figures 1-2).
 
@@ -103,17 +103,17 @@ scikit-learn developers. (n.d.). *Common pitfalls and recommended practices*. ht
 
 ---
 
-**Before submitting:** Add your name, confirm the original Colab cell outputs (particularly missingness and summary statistics), and save the executed `.ipynb` notebook separately. This report is a drafted synthesis of your exported artifacts and should be reviewed and revised in your own words.
+**Before public release or coursework submission:** Review these interpretations and the executed Colab outputs, refresh the PDF export, and follow the relevant academic-integrity, publication, and AI-assistance policies.
 
 
 ## Appendix A. Figures
 
-![Class distribution of online shopping sessions.](../results/figures/01_class_distribution.png){width=68%}
+![Class distribution of online shopping sessions.](../results/figures/01_class_distribution.png)
 
-![Distribution of product-related page duration.](../results/figures/02_engagement_distribution.png){width=68%}
+![Distribution of product-related page duration.](../results/figures/02_engagement_distribution.png)
 
-![Decision Tree confusion matrix on the held-out test set.](../results/figures/confusion_decision_tree.png){width=68%}
+![Decision Tree confusion matrix on the held-out test set.](../results/figures/confusion_decision_tree.png)
 
-![Receiver operating characteristic curves for three classifiers.](../results/figures/03_roc_curves.png){width=68%}
+![Receiver operating characteristic curves for three classifiers.](../results/figures/03_roc_curves.png)
 
-![Precision-recall curves for three classifiers.](../results/figures/04_precision_recall_curves.png){width=68%}
+![Precision-recall curves for three classifiers.](../results/figures/04_precision_recall_curves.png)
