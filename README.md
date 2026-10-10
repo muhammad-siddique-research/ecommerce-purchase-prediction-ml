@@ -137,7 +137,7 @@ reports/      Results-based research report, PDF, and original template
 
 Cite the **dataset** using the UCI DOI above. For the code, see [`CITATION.cff`](CITATION.cff). If you use this for coursework, follow your institution's policy on the use of generative AI and publication of assignment solutions.
 
-## References (APA 7)
+## References
 
 Sakar, C., & Kastro, Y. (2018). *Online Shoppers Purchasing Intention Dataset* [Data set]. UCI Machine Learning Repository. https://doi.org/10.24432/C5F88Q
 
