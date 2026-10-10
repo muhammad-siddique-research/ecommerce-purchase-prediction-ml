@@ -3,7 +3,7 @@
 **Researcher:** Muhammad Siddique  
 **Date:** 9 October 2026  
 **Dataset:** Online Shoppers Purchasing Intention Dataset (UCI, DOI: 10.24432/C5F88Q)  
-**Status:** Research report based on the executed Colab experiment; author review required before final public release.
+**Status:** Published research project report based on the executed Colab experiment; accompanying [final PDF](research_report_final.pdf) is available for university submission.
 
 ## Abstract
 
@@ -103,7 +103,7 @@ scikit-learn developers. (n.d.). *Common pitfalls and recommended practices*. ht
 
 ---
 
-**Before public release or coursework submission:** Review these interpretations and the executed Colab outputs, refresh the PDF export, and follow the relevant academic-integrity, publication, and AI-assistance policies.
+**Submission integrity note:** Review the interpretations and saved notebook outputs before submitting to the university portal. Follow institutional publication, authorship, and AI-assistance policies.
 
 
 ## Appendix A. Figures

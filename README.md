@@ -9,7 +9,7 @@ This project compares three classification methods under a common preprocessing,
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muhammad-siddique-research/ecommerce-purchase-prediction-ml/blob/main/notebooks/Algorithm_Evaluation_Extravaganza_UCI.ipynb)
 
-**Explore the project:** [Executed Colab notebook](notebooks/Algorithm_Evaluation_Extravaganza_UCI.ipynb) · [Model results](results/test_model_metrics.csv) · [Research report](reports/research_report.md) · [PDF report (draft)](reports/research_report.pdf) · [Automated tests](https://github.com/muhammad-siddique-research/ecommerce-purchase-prediction-ml/actions)
+**Explore the project:** [Executed Colab notebook](notebooks/Algorithm_Evaluation_Extravaganza_UCI.ipynb) · [Model results](results/test_model_metrics.csv) · [Research report](reports/research_report.md) · [Final research report (PDF)](reports/research_report_final.pdf) · [Automated tests](https://github.com/muhammad-siddique-research/ecommerce-purchase-prediction-ml/actions)
 
 ## Results at a glance — executed Colab experiment
 
@@ -34,7 +34,7 @@ All three models were tuned on the training partition with three-fold stratified
 
 The Decision Tree confusion matrix shows **224 true positives**, **91 false positives**, **158 false negatives**, and **1,993 true negatives** across **2,466 held-out sessions**.
 
-**Critical sensitivity finding:** Removing `PageValues` from the Decision Tree reduces held-out F1 from **0.643 to 0.161** in an exploratory ablation. This raises a predictor-timing issue; it is not proof of leakage or a causal relationship. See the [results-based report](reports/research_report.md) and [PDF report](reports/research_report.pdf) for interpretation and limitations.
+**Critical sensitivity finding:** Removing `PageValues` from the Decision Tree reduces held-out F1 from **0.643 to 0.161** in an exploratory ablation. This raises a predictor-timing issue; it is not proof of leakage or a causal relationship. See the [results-based report](reports/research_report.md) and [final research report (PDF)](reports/research_report_final.pdf) for interpretation and limitations.
 
 ### Model performance visualizations
 
@@ -73,7 +73,7 @@ The notebook verifies **zero missing predictor values** and identifies **125 rep
 - [Held-out model metrics (CSV)](results/test_model_metrics.csv)
 - [Cross-validation scores and best hyperparameters (CSV)](results/cross_validation_summary.csv)
 - [PageValues feature ablation (CSV)](results/pagevalues_ablation.csv)
-- [Research report PDF (draft pending author review)](reports/research_report.pdf)
+- [Final research report (PDF)](reports/research_report_final.pdf)
 - [Executed Google Colab notebook](notebooks/Algorithm_Evaluation_Extravaganza_UCI.ipynb)
 
 **Verification note:** The [executed Colab notebook](notebooks/Algorithm_Evaluation_Extravaganza_UCI.ipynb) preserves saved outputs, and the tables and figures were checked against the exported results. Review the interpretation and report before academic submission or public release.
@@ -109,7 +109,7 @@ The recorded features are aggregated over a shopping session. Predicting a compl
 2. Choose **Runtime → Run all** (CPU runtime suffices). Colab must have internet access to retrieve the UCI dataset.
 3. Review `cv_table` and `results_table` for **actual** scores; make sure all figures render.
 4. Run the notebook's last cell to download `experiment_outputs.zip`.
-5. The repository includes verified exported CSVs in `results/`, figures in `results/figures/`, and a results-based draft report in [`reports/research_report.md`](reports/research_report.md). Review/edit these before submission.
+5. The repository includes verified exported CSVs in `results/`, figures in `results/figures/`, and a results-based research report in [`reports/research_report.md`](reports/research_report.md), with a [final PDF](reports/research_report_final.pdf) for submission. Check these against your portal's submission instructions.
 6. Add your own contextual interpretation and ensure the report accurately reflects your executed Colab outputs. Commit only observed, correctly labeled results.
 
 ## Alternative — Run from terminal
@@ -153,7 +153,7 @@ reports/      Results-based research report, PDF, and original template
 
 **Cite the dataset independently** using the UCI DOI above; for repository software, use [`CITATION.cff`](CITATION.cff). Code organization and documentation were developed with AI assistance; model metrics originate from the executed Colab experiment. Follow applicable academic integrity, assignment-publication, and dataset attribution requirements.
 
-**Publication status:** Repository documentation and Markdown research report are updated; the existing PDF report is a *draft* and requires a refreshed author-attributed export before public release.
+**Publication status:** This repository is public, and the [final author-attributed PDF](reports/research_report_final.pdf) is available for university submission. The notebook, model metrics, figures, and source code remain available for independent inspection.
 
 ## References
 
