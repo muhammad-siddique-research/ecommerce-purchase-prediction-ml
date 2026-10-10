@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the UCI dataset separately and cite this repository if you reuse its code."
+title: "E-Commerce Purchase Intention Prediction: A Comparative Machine Learning Study"
+type: software
+authors:
+  - name: "[REPLACE WITH YOUR PREFERRED PUBLIC AUTHOR NAME]"
+date-released: 2026-10-09
+license: MIT
+abstract: "Reproducible baseline comparison of three supervised learning algorithms for online purchase prediction."
+keywords:
+  - machine learning
+  - ecommerce
+  - classification
+  - reproducibility

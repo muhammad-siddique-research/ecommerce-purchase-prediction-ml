@@ -1,0 +1,14 @@
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+.env
+*.pyc
+.DS_Store
+/data/
+*.zip
+# Avoid accidentally committing raw datasets or automatically generated experiment artifacts.
+/online_shoppers_intention.csv
+/results/*.csv
+/results/figures/*.png

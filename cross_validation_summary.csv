@@ -1,0 +1,4 @@
+Model,Best cross-validated F1,Best hyperparameters
+Decision Tree,0.6271475444032643,"{'model__max_depth': 5, 'model__min_samples_leaf': 10}"
+KNN,0.4704466522991346,{'model__n_neighbors': 11}
+Gaussian Naive Bayes,0.3090890856208749,{'model__var_smoothing': 1e-07}
